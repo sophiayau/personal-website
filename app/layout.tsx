@@ -1,11 +1,10 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { Pixelify_Sans } from "next/font/google";
+import Script from "next/script";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
 
-const pixelify = Pixelify_Sans({
-  subsets: ["latin"],
-  weight: ["400"], // Pixelify Sans only supports 400
-});
+config.autoAddCss = false;
 
 export default function RootLayout({
   children,
@@ -15,6 +14,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Script
+          src="https://kit.fontawesome.com/517892e4af.js"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <Navbar />
         {children}
       </body>
