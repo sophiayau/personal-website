@@ -1,4 +1,4 @@
-import ExperienceCard from "@/components/ExperienceCard";
+import ExperienceCard from "@/components/HomeExperienceCard";
 import Link from "next/link";
 
 export default function ExperienceSection() {
