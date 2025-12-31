@@ -51,7 +51,7 @@ export default function ProjectSection() {
               transition-all duration-200 ease-out
               hover:scale-105
               hover:shadow-lg
-            "
+            " 
           >
             See more
           </Link>
