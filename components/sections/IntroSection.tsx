@@ -31,7 +31,6 @@ export default function IntroSection() {
           gap-10 md:gap-16
         "
       >
-        {/* LEFT (photo + name + title) */}
         <div className="w-full md:w-1/3 flex flex-col items-center text-center">
           <Image
             src="/headshot.jpeg"
@@ -45,7 +44,6 @@ export default function IntroSection() {
             "
           />
 
-          {/* Name (one line on mobile) */}
           <h1
             className={`
               ${inter.className}
@@ -61,7 +59,6 @@ export default function IntroSection() {
             ophia Yau
           </h1>
 
-          {/* Title (one line on mobile) */}
           <p
             className={`
               ${inter.className}
@@ -77,7 +74,6 @@ export default function IntroSection() {
           </p>
         </div>
 
-        {/* RIGHT (intro + icons) */}
         <div className="w-full flex-1 text-center md:text-left">
           <p
             className={`
@@ -94,7 +90,6 @@ export default function IntroSection() {
             problems into simple, intuitive solutions.
           </p>
 
-          {/* Icons: centered on mobile, wraps so nothing gets cut off */}
           <div className="mt-7 flex flex-wrap justify-center md:justify-start gap-6 text-white/90 text-3xl sm:text-4xl">
             <a
               href="https://github.com/sophiayau"
