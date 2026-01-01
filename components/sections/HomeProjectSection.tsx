@@ -16,23 +16,23 @@ export default function ProjectSection() {
               name="Focus Point"
               description="Distraction detection application using real-time computer vision."
               techTags={["Computer Vision", "Real-time Systems", "Open Source Models", "Full Stack"]}
-              projectLogo="/logos/anote.jpeg"
+              projectLogo="/logos/focus_point.jpg"
             />
           </div>
 
           <div className="w-full max-w-[300px]">
             <ProjectCard
               name="RefuConnect"
-              description="Multilingual and auto-translating communication platform"
+              description="Multilingual and auto-translating communication platform."
               techTags={["Real-time Systems", "APIs", "Full Stack", "WebSockets"]}
-              projectLogo="/logos/anote.jpeg"
+              projectLogo="/logos/refuconnect.jpg"
             />
           </div>
 
           <div className="w-full max-w-[300px]">
             <ProjectCard
               name="Personal Portfolio"
-              description="Tracks and compares flight prices with calendar integration."
+              description="Platform home to my projects, skills, and experience."
               techTags={["Component-Based Architecture", "Frontend", "Web Application"]}
               projectLogo="/logos/portfolio_logo.png"
             />
@@ -51,7 +51,7 @@ export default function ProjectSection() {
               transition-all duration-200 ease-out
               hover:scale-105
               hover:shadow-lg
-            " 
+            "
           >
             See more
           </Link>
