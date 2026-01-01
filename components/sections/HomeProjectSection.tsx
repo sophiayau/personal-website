@@ -1,62 +1,62 @@
-import Link from "next/link";
-import ProjectCard from "@/components/HomeProjectCard";
+import Image from "next/image";
 
-export default function ProjectSection() {
+type ProjectCardProps = {
+  name: string;
+  description: string;
+  techTags: string[];
+  projectLogo?: string;
+  logoAlt?: string;
+};
+
+export default function ProjectCard({
+  name,
+  description,
+  techTags,
+  projectLogo,
+  logoAlt,
+}: ProjectCardProps) {
   return (
-    <section className="bg-white py-12">
-      <div className="mx-auto max-w-6xl px-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-8">
-          Projects
-        </h2>
+    <div
+      className="
+        w-full
+        rounded-2xl bg-white p-6
+        border border-gray-200
+        shadow-sm
+        transition-all duration-200
+        hover:-translate-y-1 hover:shadow-md
+        flex flex-col
+      "
+    >
+      <div className="flex items-center gap-3 mb-3">
+        {projectLogo && (
+          <Image
+            src={projectLogo}
+            alt={logoAlt || name}
+            width={32}
+            height={32}
+            className="object-contain"
+          />
+        )}
 
-        <div className="grid gap-6 md:grid-cols-3 justify-items-center">
-          
-          <div className="w-full max-w-[300px]">
-            <ProjectCard
-              name="Focus Point"
-              description="Distraction detection application using real-time computer vision."
-              techTags={["Computer Vision", "Real-time Systems", "Open Source Models", "Full Stack"]}
-              projectLogo="/logos/focus_point.jpg"
-            />
-          </div>
-
-          <div className="w-full max-w-[300px]">
-            <ProjectCard
-              name="RefuConnect"
-              description="Multilingual and auto-translating communication platform."
-              techTags={["Real-time Systems", "APIs", "Full Stack", "WebSockets"]}
-              projectLogo="/logos/refuconnect.jpg"
-            />
-          </div>
-
-          <div className="w-full max-w-[300px]">
-            <ProjectCard
-              name="Personal Portfolio"
-              description="Platform home to my projects, skills, and experience."
-              techTags={["Component-Based Architecture", "Frontend", "Web Application"]}
-              projectLogo="/logos/portfolio_logo.png"
-            />
-          </div>
-
-        </div>
-
-        <div className="mt-12 flex justify-center">
-          <Link
-            href="/projects"
-            className="
-              inline-flex items-center gap-2 bg-black text-white
-              rounded-xl px-5 py-3
-              text-sm font-semibold
-              text-blue-600
-              transition-all duration-200 ease-out
-              hover:scale-105
-              hover:shadow-lg
-            "
-          >
-            See more
-          </Link>
-          </div>
+        <h3 className="text-base font-semibold text-gray-900">
+          {name}
+        </h3>
       </div>
-    </section>
+
+      <p className="text-sm text-gray-600 leading-relaxed flex-grow">
+        {description}
+      </p>
+
+      <div className="mt-4 flex flex-wrap gap-2">
+        {techTags.map((tag) => (
+          <span
+            key={tag}
+            className="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-600"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+    </div>
   );
 }

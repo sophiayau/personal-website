@@ -19,39 +19,45 @@ export default function ProjectCard({
     <div
       className="
         w-full
-        rounded-2xl bg-white p-6
+        rounded-2xl
+        bg-white
+        px-6 py-7 sm:p-8
         border border-gray-200
         shadow-sm
         transition-all duration-200
         hover:-translate-y-1 hover:shadow-md
         flex flex-col
+        min-h-[240px]
       "
     >
-      <div className="flex items-center gap-3 mb-3">
+      <div className="flex items-center gap-4 mb-4">
         {projectLogo && (
           <Image
             src={projectLogo}
             alt={logoAlt || name}
-            width={32}
-            height={32}
-            className="object-contain"
+            width={44}
+            height={44}
+            className="object-contain rounded-md"
           />
         )}
 
-        <h3 className="text-base font-semibold text-gray-900">
+        <h3 className="text-lg sm:text-xl font-semibold text-gray-900 leading-tight">
           {name}
         </h3>
       </div>
 
-      <p className="text-sm text-gray-600 leading-relaxed flex-grow">
+      <p className="text-sm sm:text-base text-gray-600 leading-relaxed flex-grow">
         {description}
       </p>
 
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="mt-6 flex flex-wrap gap-2">
         {techTags.map((tag) => (
           <span
             key={tag}
-            className="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-600"
+            className="
+              rounded-full bg-gray-100 px-3 py-1
+              text-xs sm:text-sm text-gray-700
+            "
           >
             {tag}
           </span>
