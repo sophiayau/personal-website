@@ -11,6 +11,7 @@ export default function ExperienceSection() {
 
         <div className="grid gap-6 md:grid-cols-3 justify-items-center">
           
+          <Link href="/experience#c1">
           <div className="w-full max-w-[300px]">
             <ExperienceCard
               company="Capital One"
@@ -22,7 +23,9 @@ export default function ExperienceSection() {
               logoSrc="/logos/capital_one.jpeg"
             />
           </div>
+          </Link>
 
+          <Link href="/experience#anote">
           <div className="w-full max-w-[300px]">
             <ExperienceCard
               company="Anote"
@@ -34,7 +37,9 @@ export default function ExperienceSection() {
               logoSrc="/logos/anote.jpeg"
             />
           </div>
+          </Link>
 
+          <Link href="/experience#tiqc">
           <div className="w-full max-w-[300px]">
             <ExperienceCard
               company="Queens College CUNY"
@@ -46,6 +51,7 @@ export default function ExperienceSection() {
               logoSrc="/logos/queens_college.jpeg"
             />
           </div>
+          </Link>
 
         </div>
 
