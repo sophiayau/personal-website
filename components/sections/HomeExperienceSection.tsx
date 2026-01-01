@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ExperienceSection() {
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-12">
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-8">
           Experience
