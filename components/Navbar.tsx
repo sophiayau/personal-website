@@ -5,7 +5,6 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-md">
       <nav className="mx-auto max-w-6xl px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
-        {/* Logo */}
         <Link
           href="/"
           className={`
@@ -20,7 +19,6 @@ export default function Navbar() {
           S
         </Link>
 
-        {/* Links */}
         <div
           className={`
             ${inter.className}
