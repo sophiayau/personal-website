@@ -7,7 +7,7 @@ export default function ExperienceTimeline() {
     <div className={`${inter.className} flex justify-center`}>
       <div
         className="
-          relative w-full max-w-4xl
+          relative w-full max-w-5xl
           rounded-3xl
           border border-white/60
           bg-white/75

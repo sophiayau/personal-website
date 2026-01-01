@@ -5,7 +5,7 @@ import { faSquareEnvelope, faDownload } from "@fortawesome/free-solid-svg-icons"
 export default function Footer() {
   return (
     <footer
-        className="shadow-[0_-6px_20px_rgba(0,0,0,0.12)]"
+        
       style={{
         backgroundImage: `
           radial-gradient(1200px 600px at 15% 85%, rgba(255,255,255,0.25), transparent 60%),
@@ -22,7 +22,7 @@ export default function Footer() {
 
         <div className="flex items-center justify-center gap-5 text-2xl text-white/80">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/sophiayau"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -32,7 +32,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://linkedin.com/in/sophiayau"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -42,7 +42,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="mailto:you@email.com"
+            href="mailto:sophiayau888@gmail.com"
             aria-label="Email"
             className="hover:text-white transition"
           >

@@ -17,7 +17,7 @@ export default function IntroSection() {
         `,
       }}
     >
-      <div className="mx-auto max-w-6xl px-6 py-24 flex items-center gap-16">
+      <div className="mx-auto max-w-6xl px-6 py-20 flex items-center gap-16">
 
         <div className="w-1/3 flex flex-col items-center text-center">
           <Image
@@ -44,7 +44,7 @@ export default function IntroSection() {
             problems into simple, intuitive solutions.
           </p>
 
-          <div className="mt-6 flex gap-6 text-white/80 text-3xl">
+          <div className="mt-6 flex gap-6 text-white/90 text-3xl">
 
         <a
           href="https://github.com/sophiayau"
