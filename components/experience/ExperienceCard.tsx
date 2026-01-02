@@ -58,10 +58,11 @@ export default function ExperienceCard({ exp }: { exp: Experience }) {
 
         <ul className="mt-6 space-y-3 text-sm text-gray-700">
           {exp.bullets.map((b, i) => (
-            <li key={i} className="flex gap-3">
-              <span className="mt-2 h-1.5 w-1.5 rounded-full bg-blue-500" />
-              {b}
-            </li>
+              <li key={i} className="flex gap-3">
+              <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-500" />
+              <span className="flex-1">{b}</span>
+              </li>
+
           ))}
         </ul>
 
