@@ -6,7 +6,7 @@ import { inter } from "@/lib/fonts";
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-[#F2F5FA]">
-      <main className="px-6 py-20">
+      <main className="px-4 sm:px-6 py-12 sm:py-20">
         <div
           className={`
             ${inter.className}
@@ -15,7 +15,8 @@ export default function ProjectsPage() {
             border border-white/60
             bg-white/75
             backdrop-blur-xl
-            px-12 py-12
+            px-5 py-8
+            sm:px-12 sm:py-12
             shadow-[0_20px_60px_rgba(15,23,42,0.10)]
           `}
         >
