@@ -12,9 +12,7 @@ export default function ExperiencePage() {
     const id = hash.replace("#", "");
     const timeout = setTimeout(() => {
       const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
 
     return () => clearTimeout(timeout);
@@ -22,10 +20,10 @@ export default function ExperiencePage() {
 
   return (
     <div>
-    <main className="min-h-screen bg-[#F2F5FA] px-6 py-20">
-      <ExperienceTimeline />
-    </main>
-    <Footer />
+      <main className="min-h-screen bg-[#F2F5FA] px-4 sm:px-6 py-12 sm:py-20">
+        <ExperienceTimeline />
+      </main>
+      <Footer />
     </div>
   );
 }
