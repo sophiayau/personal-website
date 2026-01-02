@@ -1,9 +1,24 @@
+"use client";
+
 import { projects } from "@/data/projects";
+import { useEffect } from "react";
 import ProjectCard from "@/components/project/ProjectCard";
 import Footer from "@/components/Footer";
 import { inter } from "@/lib/fonts";
 
 export default function ProjectsPage() {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (!hash) return;
+
+    const id = hash.replace("#", "");
+    const timeout = setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+
+    return () => clearTimeout(timeout);
+  }, []);
   return (
     <div className="min-h-screen bg-[#F2F5FA]">
       <main className="px-4 sm:px-6 py-12 sm:py-20">
@@ -35,9 +50,11 @@ export default function ProjectsPage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {projects.map((p) => (
-              <ProjectCard key={p.id} project={p} />
-            ))}
+          {projects.map((p) => (
+            <div key={p.id} id={p.id} className="scroll-mt-24">
+              <ProjectCard project={p} />
+            </div>
+          ))}
           </div>
         </div>
       </main>

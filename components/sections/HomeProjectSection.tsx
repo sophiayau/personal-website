@@ -29,7 +29,7 @@ export default function ProjectSection() {
             </div>
           </Link>
 
-          <Link href="/projects#refuconnect" className="block">
+          <Link href="/projects#refu" className="block">
             <div className="w-full max-w-none md:max-w-[360px] mx-auto">
               <ProjectCard
                 name="RefuConnect"

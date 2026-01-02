@@ -45,7 +45,7 @@ export const projects: Project[] = [
     ],
     links: {
         demo: "https://staging.dzou4t941x83j.amplifyapp.com/",
-        code: "https://www.linkedin.com"
+        code: "https://github.com/sophiayau/DistractionDetection"
     }
 },
 {

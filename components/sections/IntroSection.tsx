@@ -85,9 +85,19 @@ export default function IntroSection() {
               max-w-xl
             `}
           >
-            I’m a software engineer focused on building thoughtful, scalable
-            applications. I enjoy working across the stack and turning complex
-            problems into simple, intuitive solutions.
+            Software Engineer developing reliable, scalable products with a focus on backend development and data engineering.
+          </p>
+          <p
+            className={`
+              ${inter.className}
+              text-white/90
+              text-base sm:text-lg
+              leading-relaxed
+              mx-auto md:mx-0
+              max-w-xl
+            `}
+          >
+            Passionate about building at the intersection of finance and data.
           </p>
 
           <div className="mt-7 flex flex-wrap justify-center md:justify-start gap-6 text-white/90 text-3xl sm:text-4xl">
