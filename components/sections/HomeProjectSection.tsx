@@ -1,62 +1,76 @@
-import Image from "next/image";
+import Link from "next/link";
+import ProjectCard from "@/components/HomeProjectCard";
+import { inter } from "@/lib/fonts";
 
-type ProjectCardProps = {
-  name: string;
-  description: string;
-  techTags: string[];
-  projectLogo?: string;
-  logoAlt?: string;
-};
-
-export default function ProjectCard({
-  name,
-  description,
-  techTags,
-  projectLogo,
-  logoAlt,
-}: ProjectCardProps) {
+export default function ProjectSection() {
   return (
-    <div
-      className="
-        w-full
-        rounded-2xl bg-white p-6
-        border border-gray-200
-        shadow-sm
-        transition-all duration-200
-        hover:-translate-y-1 hover:shadow-md
-        flex flex-col
-      "
-    >
-      <div className="flex items-center gap-3 mb-3">
-        {projectLogo && (
-          <Image
-            src={projectLogo}
-            alt={logoAlt || name}
-            width={32}
-            height={32}
-            className="object-contain"
-          />
-        )}
+    <section className={` ${inter.className} bg-white py-14 sm:py-16`}>
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="mb-10">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
+            Projects
+          </h2>
+        </div>
 
-        <h3 className="text-base font-semibold text-gray-900">
-          {name}
-        </h3>
-      </div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <Link href="/projects#fp" className="block">
+            <div className="w-full max-w-none md:max-w-[360px] mx-auto">
+              <ProjectCard
+                name="Focus Point"
+                description="Distraction detection application using real-time computer vision."
+                techTags={[
+                  "Computer Vision",
+                  "Full Stack",
+                  "Real-time Systems",
+                  "Open Source",
+                ]}
+                projectLogo="/logos/focus_point.jpg"
+              />
+            </div>
+          </Link>
 
-      <p className="text-sm text-gray-600 leading-relaxed flex-grow">
-        {description}
-      </p>
+          <Link href="/projects#refuconnect" className="block">
+            <div className="w-full max-w-none md:max-w-[360px] mx-auto">
+              <ProjectCard
+                name="RefuConnect"
+                description="Multilingual and auto-translating communication platform."
+                techTags={["Real-time Systems", "APIs", "Full Stack", "WebSockets"]}
+                projectLogo="/logos/refuconnect.jpg"
+              />
+            </div>
+          </Link>
 
-      <div className="mt-4 flex flex-wrap gap-2">
-        {techTags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-600"
+          <Link href="/projects#portfolio" className="block">
+            <div className="w-full max-w-none md:max-w-[360px] mx-auto">
+              <ProjectCard
+                name="Personal Portfolio"
+                description="Platform home to my projects, skills, and experience."
+                techTags={[
+                  "Component-Based Architecture",
+                  "Frontend",
+                  "Web Application",
+                ]}
+                projectLogo="/logos/portfolio_logo.png"
+              />
+            </div>
+          </Link>
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <Link
+            href="/projects"
+            className="
+              inline-flex items-center justify-center
+              rounded-xl bg-black px-6 py-3
+              text-sm font-semibold text-white
+              transition-all duration-200 ease-out
+              hover:scale-105 hover:shadow-lg
+            "
           >
-            {tag}
-          </span>
-        ))}
+            See more
+          </Link>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
