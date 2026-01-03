@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { pixelify, inter } from "@/lib/fonts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -129,7 +130,7 @@ export default function IntroSection() {
               <FontAwesomeIcon icon={faSquareEnvelope} />
             </a>
 
-            <a
+            {/* <a
               href="/Sophia_Yau_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -137,8 +138,27 @@ export default function IntroSection() {
               className="inline-flex items-center hover:text-white hover:scale-110 transition"
             >
               <FontAwesomeIcon icon={faDownload} />
-            </a>
+            </a> */}
+            
           </div>
+          <div className="mt-5">
+            <Link
+              href="/Sophia_Yau_Resume.pdf"
+              target="_blank"
+              className="
+                inline-flex items-center gap-2
+                rounded-full
+                bg-white/15
+                px-5 py-2.5
+                text-sm font-semibold text-white/90
+                backdrop-blur
+                transition-all duration-200 ease-out
+                hover:bg-white/25
+              "
+            >
+              View Resume
+            </Link>
+            </div>
         </div>
       </div>
     </section>

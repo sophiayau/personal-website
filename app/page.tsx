@@ -1,8 +1,9 @@
 import ExperienceSection from "@/components/sections/HomeExperienceSection";
 import IntroSection from "@/components/sections/IntroSection";
 import ProjectSection from "@/components/sections/HomeProjectSection";
+import SkillSection from "@/components/sections/SkillSection";
+import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/Footer";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -10,6 +11,8 @@ export default function Home() {
       <IntroSection />
       <ExperienceSection />
       <ProjectSection />
+      <SkillSection />
+      <ContactSection />
       <Footer />
     </main>
   );
